@@ -69,4 +69,4 @@ puts ""
 puts "destroying favorites"
 Favorite.destroy_all
 puts "creating favorites"
-Favorite.create(recipe_id: 11, user_id: 5, notes: [])
+Favorite.create(recipe_id: 1, user_id: 1, notes: [])

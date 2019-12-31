@@ -5,6 +5,7 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :ingredients
       t.string :steps
+      t.integer :likes, default: 0
 
       t.timestamps
     end
