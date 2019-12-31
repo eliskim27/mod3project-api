@@ -4,3 +4,5 @@ class Api::V1::RecipesController < ApplicationController
         render json: recipes, except: [:created_at, :updated_at]
     end
 end
+
+

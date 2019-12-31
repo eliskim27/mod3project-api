@@ -5,54 +5,52 @@ puts "creating recipes"
 
 recipes = [
     {
-        recipe_id: 500345,
         title: "Easy Homemade Wheat Bread",
-        image: "https://spoonacular.com/recipeImages/500345-312x231.jpg"
+        image: "https://spoonacular.com/recipeImages/500345-312x231.jpg",
+        ingredients: ["millet", "water", "yeast", "oats", "salt"],
+        steps: ["Combine warm water (like bath water, or about 110*) with yeast in a large mixing bowl and let set for 5 minutes to get foamy. Then add salt and flours and stir with a wooden spoon. The result will be a sticky, rough dough.Lift the dough out of the bowl and lightly grease the bowl with nonstick spray or olive oil. Cover with plastic wrap and let rise in the refrigerator for two hours or in a warm place for 1 hour.Once doubled in size, lightly sprinkle the dough with flour and transfer to a generously floured work surface. Knead a few times adding flour as needed and then add oats and millet in batches. Knead until until grains are incorporated and the dough is no longer sticky.", "Place on lightly greased baking sheet. Sift a light coating of flour over the top to help keep the dough moist.", "Let rest for 45-60 minutes.Preheat oven to 450°F and place a metal or cast iron pan (not glass, Pyrex, or ceramic) on the lowest oven rack, and have 1 cup of hot water ready.When ready to bake, slash the bread 2 or 3 times with a knife, making a cut about ½-inch deep.", "Place bread in oven and carefully pour hot water into the shallow pan on the rack beneath. Close oven door quickly.", "Bake the bread for 25 to 35 minutes, or until golden brown and crusty.", "Remove the bread from the oven and cool on a rack. Once fully cooled, store leftovers in a plastic bag at room temp."]
     },
     {
-        recipe_id: 487640,
-        title: "basil focaccia bread , how to make basil focaccia bread",
-        image: "https://spoonacular.com/recipeImages/487640-312x231.jpg"
+        title: "Basil Focaccia Bread",
+        image: "https://spoonacular.com/recipeImages/487640-312x231.jpg",
+        ingredients: ["stuff", "more stuff"],
+        steps: ["do this thing", "do this other thing"]
     },
     {
-        recipe_id: 475072,
-        title: "Spinach-Artichoke French Bread Pizza {Saturdays with Rachael Ray}",
-        image: "https://spoonacular.com/recipeImages/475072-312x231.jpg"
-    },
-    {
-        recipe_id: 991179,
         title: "Whole Wheat No-Knead Bread",
-        image: "https://spoonacular.com/recipeImages/991179-312x231.jpg"
+        image: "https://spoonacular.com/recipeImages/991179-312x231.jpg",
+        ingredients: [],
+        steps: []
     },
     {
-        recipe_id: 559430,
         title: "Steak Fry Bread Tacos",
-        image: "https://spoonacular.com/recipeImages/559430-312x231.jpg"
+        image: "https://spoonacular.com/recipeImages/559430-312x231.jpg",
+        ingredients: [],
+        steps: []
     },
     {
-        recipe_id: 497074,
         title: "No Knead Olive Walnut Bread",
-        image: "https://spoonacular.com/recipeImages/497074-312x231.jpg"
+        image: "https://spoonacular.com/recipeImages/497074-312x231.jpg",
+        ingredients: [],
+        steps: []
     },
     {
-        recipe_id: 532968,
         title: "Sweet Wheat Bread Bowls",
-        image: "https://spoonacular.com/recipeImages/532968-312x231.jpg"
+        image: "https://spoonacular.com/recipeImages/532968-312x231.jpg",
+        ingredients: [],
+        steps: []
     },
     {
-        recipe_id: 830610,
         title: "Homemade Rye Bread",
-        image: "https://spoonacular.com/recipeImages/830610-312x231.jpg"
+        image: "https://spoonacular.com/recipeImages/830610-312x231.jpg",
+        ingredients: [],
+        steps: []
     },
     {
-        recipe_id: 210715,
-        title: "Courgette, potato & cheddar bread",
-        image: "https://spoonacular.com/recipeImages/210715-312x231.jpg"
-    },
-    {
-        recipe_id: 698345,
-        title: "Hearty Grain Bread",
-        image: "https://spoonacular.com/recipeImages/698345-312x231.jpg"
+        title: "Courgette, Potato & Cheddar bread",
+        image: "https://spoonacular.com/recipeImages/210715-312x231.jpg",
+        ingredients: [],
+        steps: []
     }
 ]
 
@@ -71,4 +69,4 @@ puts ""
 puts "destroying favorites"
 Favorite.destroy_all
 puts "creating favorites"
-Favorite.create(recipe_id: 31, user_id: 3, notes: [])
+Favorite.create(recipe_id: 11, user_id: 5, notes: [])

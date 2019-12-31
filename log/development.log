@@ -639,3 +639,1404 @@ Processing by Api::V1::RecipesController#index as HTML
 Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 5279)
 
 
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 14:25:01 -0500
+Processing by Api::V1::RecipesController#index as HTML
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1820)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.6ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 31]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.6ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.4ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.3ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.3ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.5ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.3ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 37]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.4ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.8ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 39]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.3ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6846106169452741695)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFavorites (20191230182013)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "favorites"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191230182013"]]
+  [1m[35m (47.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6846106169452741695)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6846106169452741695)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecipes (20191230160532)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "recipes"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191230160532"]]
+  [1m[35m (46.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6846106169452741695)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6846106169452741695)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecipes (20191230160532)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.7ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "title" character varying, "image" character varying, "ingredients" character varying, "steps" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191230160532"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFavorites (20191230182013)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "recipe_id" integer, "user_id" integer, "notes" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191230182013"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6846106169452741695)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (9.9ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Easy Homemade Wheat Bread"], ["image", "https://spoonacular.com/recipeImages/500345-312x231.jpg"], ["ingredients", "[\"millet\", \"water\", \"yeast\", \"oats\", \"salt\"]"], ["steps", "[\"Combine warm water (like bath water, or about 110*) with yeast in a large mixing bowl and let set for 5 minutes to get foamy. Then add salt and flours and stir with a wooden spoon. The result will be a sticky, rough dough.Lift the dough out of the bowl and lightly grease the bowl with nonstick spray or olive oil. Cover with plastic wrap and let rise in the refrigerator for two hours or in a warm place for 1 hour.Once doubled in size, lightly sprinkle the dough with flour and transfer to a generously floured work surface. Knead a few times adding flour as needed and then add oats and millet in batches. Knead until until grains are incorporated and the dough is no longer sticky.\", \"Place on lightly greased baking sheet. Sift a light coating of flour over the top to help keep the dough moist.\", \"Let rest for 45-60 minutes.Preheat oven to 450°F and place a metal or cast iron pan (not glass, Pyrex, or ceramic) on the lowest oven rack, and have 1 cup of hot water ready.When ready to bake, slash the bread 2 or 3 times with a knife, making a cut about ½-inch deep.\", \"Place bread in oven and carefully pour hot water into the shallow pan on the rack beneath. Close oven door quickly.\", \"Bake the bread for 25 to 35 minutes, or until golden brown and crusty.\", \"Remove the bread from the oven and cool on a rack. Once fully cooled, store leftovers in a plastic bag at room temp.\"]"], ["created_at", "2019-12-30 19:36:12.645860"], ["updated_at", "2019-12-30 19:36:12.645860"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Basil Focaccia Bread"], ["image", "https://spoonacular.com/recipeImages/487640-312x231.jpg"], ["ingredients", "[\"stuff\", \"more stuff\"]"], ["steps", "[\"do this thing\", \"do this other thing\"]"], ["created_at", "2019-12-30 19:36:12.662919"], ["updated_at", "2019-12-30 19:36:12.662919"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Whole Wheat No-Knead Bread"], ["image", "https://spoonacular.com/recipeImages/991179-312x231.jpg"], ["ingredients", "[]"], ["steps", "[]"], ["created_at", "2019-12-30 19:36:12.668299"], ["updated_at", "2019-12-30 19:36:12.668299"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Steak Fry Bread Tacos"], ["image", "https://spoonacular.com/recipeImages/559430-312x231.jpg"], ["ingredients", "[]"], ["steps", "[]"], ["created_at", "2019-12-30 19:36:12.672154"], ["updated_at", "2019-12-30 19:36:12.672154"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "No Knead Olive Walnut Bread"], ["image", "https://spoonacular.com/recipeImages/497074-312x231.jpg"], ["ingredients", "[]"], ["steps", "[]"], ["created_at", "2019-12-30 19:36:12.676108"], ["updated_at", "2019-12-30 19:36:12.676108"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Sweet Wheat Bread Bowls"], ["image", "https://spoonacular.com/recipeImages/532968-312x231.jpg"], ["ingredients", "[]"], ["steps", "[]"], ["created_at", "2019-12-30 19:36:12.680090"], ["updated_at", "2019-12-30 19:36:12.680090"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Homemade Rye Bread"], ["image", "https://spoonacular.com/recipeImages/830610-312x231.jpg"], ["ingredients", "[]"], ["steps", "[]"], ["created_at", "2019-12-30 19:36:12.684323"], ["updated_at", "2019-12-30 19:36:12.684323"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "image", "ingredients", "steps", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Courgette, Potato & Cheddar bread"], ["image", "https://spoonacular.com/recipeImages/210715-312x231.jpg"], ["ingredients", "[]"], ["steps", "[]"], ["created_at", "2019-12-30 19:36:12.688658"], ["updated_at", "2019-12-30 19:36:12.688658"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bready Roosevelt"], ["created_at", "2019-12-30 19:36:12.751385"], ["updated_at", "2019-12-30 19:36:12.751385"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavorite Create (0.7ms)[0m  [1m[32mINSERT INTO "favorites" ("recipe_id", "user_id", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["recipe_id", 41], ["user_id", 4], ["notes", "[]"], ["created_at", "2019-12-30 19:36:12.772322"], ["updated_at", "2019-12-30 19:36:12.772322"]]
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 14:36:18 -0500
+Processing by Api::V1::RecipesController#index as HTML
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.1ms | Allocations: 5751)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-12-30 14:36:34 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 3217)
+
+
+Started GET "/api/v1/favorites" for ::1 at 2019-12-30 14:36:36 -0500
+Processing by Api::V1::FavoritesController#index as HTML
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites"[0m
+  ↳ app/controllers/api/v1/favorites_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 4439)
+
+
+Started GET "/recipes" for ::1 at 2019-12-30 14:38:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recipes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/recipes" for ::1 at 2019-12-30 14:42:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recipes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/recipes" for ::1 at 2019-12-30 14:43:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recipes"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 14:44:20 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 1841)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:24:24 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.3ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:34:19 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.9ms | Allocations: 1905)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:35:13 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (10.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 5.1ms | ActiveRecord: 10.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:35:50 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (18.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 4.1ms | ActiveRecord: 18.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:36:05 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:36:16 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (10.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 10.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:37:54 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:39:32 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (12.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 3.7ms | ActiveRecord: 12.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:41:50 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (5.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 5.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:43:44 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:45:15 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (19.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 4.8ms | ActiveRecord: 19.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 15:58:03 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (6.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 6.9ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:00:11 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:28 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:30 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:31 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:33 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (12.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 12.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:35 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:42 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 4.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:43 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:03:44 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:04:12 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (11.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 3.8ms | ActiveRecord: 11.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:04:14 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.6ms | Allocations: 1844)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:04:46 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (7.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 7.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:06:05 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (14.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 4.4ms | ActiveRecord: 14.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:06:27 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:07:53 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:08:13 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (48.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 54ms (Views: 4.6ms | ActiveRecord: 48.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:09:25 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:09:42 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:11:48 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (22.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 4.6ms | ActiveRecord: 22.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:22:58 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:23:01 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (6.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 6.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:28:03 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:29:29 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (43.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 49ms (Views: 5.0ms | ActiveRecord: 43.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:31:54 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:32:50 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (34.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 3.9ms | ActiveRecord: 34.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:32:57 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:40:34 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.4ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:41:51 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:44:56 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:45:14 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 1844)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:49:22 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:50:04 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:51:38 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:52:05 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:54:32 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 3.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:54:56 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:55:00 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (6.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 6.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:56:12 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:56:58 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:57:49 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:57:52 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:58:19 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 4.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 16:58:27 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:01:25 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:02:49 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:03:36 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 4.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:04:56 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:08:04 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (9.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 9.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:08:13 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:09:33 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:10:10 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 3.1ms | Allocations: 1844)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:12:02 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 2.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:12:31 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:12:52 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:13:34 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 3.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:15:28 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:17:00 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:17:33 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (31.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 8.3ms | ActiveRecord: 31.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:19:36 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:23:54 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:24:07 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (20.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 4.4ms | ActiveRecord: 20.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:27:58 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.3ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:28:56 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:29:05 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:29:08 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:29:50 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:30:22 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:30:37 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:31:08 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:32:03 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:33:08 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:34:29 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (10.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 27.8ms | ActiveRecord: 10.4ms | Allocations: 1844)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:34:42 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:35:01 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:35:48 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:36:19 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 4.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:36:29 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:36:42 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 3.3ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:36:49 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (24.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.8ms | ActiveRecord: 24.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:40:14 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (11.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 4.0ms | ActiveRecord: 11.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:40:22 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:41:35 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:41:41 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:41:52 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 4.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:42:42 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:43:02 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:43:50 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:46:25 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:47:09 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:47:22 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 4.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:48:18 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (32.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 3.3ms | ActiveRecord: 32.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:48:27 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (8.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 4.4ms | ActiveRecord: 8.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:53:47 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.9ms | Allocations: 1903)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:54:02 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (56.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 3.1ms | ActiveRecord: 56.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 17:54:15 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 2.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:18:04 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 1.3ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:23:04 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 2.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:23:46 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 3.3ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:32:28 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.1ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:32:34 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:33:19 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:33:27 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 3.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:37:57 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (40.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 6.0ms | ActiveRecord: 40.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:38:12 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (48.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 4.3ms | ActiveRecord: 48.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:39:40 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 2.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:39:59 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 1.4ms | Allocations: 1844)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:40:04 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (11.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 4.1ms | ActiveRecord: 11.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:40:50 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:41:52 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:42:13 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:43:56 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (19.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 4.0ms | ActiveRecord: 19.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:46:07 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:46:12 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 3.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:47:40 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (62.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 67ms (Views: 3.7ms | ActiveRecord: 62.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:57:30 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (9.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 9.6ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:58:35 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:58:41 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:59:21 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (58.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 3.8ms | ActiveRecord: 58.2ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 22:59:59 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (12.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 3.4ms | ActiveRecord: 12.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:03:35 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:03:46 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 3.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:16:51 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.1ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:18:55 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (20.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 3.7ms | ActiveRecord: 20.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:25:13 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.2ms | Allocations: 1903)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:27:12 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (20.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 4.0ms | ActiveRecord: 20.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:27:18 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:29:25 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:30:21 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:30:49 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 2.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:32:15 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (5.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 5.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:32:17 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:32:21 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 4.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:33:37 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (26.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 3.6ms | ActiveRecord: 26.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:34:08 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (64.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 73ms (Views: 7.8ms | ActiveRecord: 64.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:35:37 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (26.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 5.5ms | ActiveRecord: 26.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:35:44 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 3.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:36:47 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:37:00 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (9.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 9.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:37:59 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (6.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 6.8ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:38:01 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:38:18 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (38.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 43ms (Views: 4.5ms | ActiveRecord: 38.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:41:46 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:44:04 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 2.1ms | Allocations: 1842)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:45:09 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1841)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:45:16 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 3.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:49:24 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:55:27 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.2ms | Allocations: 1900)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-30 23:59:49 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (10.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 10.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 00:00:29 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 2.9ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 00:00:45 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.1ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 00:01:28 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (17.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 2.8ms | ActiveRecord: 17.0ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 00:01:55 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 00:03:55 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.6ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 00:04:16 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 3.3ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 08:43:14 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 2.5ms | Allocations: 1839)
+
+
+Started GET "/api/v1/recipes" for ::1 at 2019-12-31 08:43:28 -0500
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 1.0ms | Allocations: 1839)
+
+
