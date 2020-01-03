@@ -4,6 +4,7 @@ class CreateFavorites < ActiveRecord::Migration[6.0]
       t.integer :recipe_id
       t.integer :user_id
       t.string :notes
+      t.string :title
 
       t.timestamps
     end

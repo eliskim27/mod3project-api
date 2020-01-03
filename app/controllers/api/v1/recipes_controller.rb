@@ -7,7 +7,13 @@ class Api::V1::RecipesController < ApplicationController
     def update
         recipe = Recipe.find(params[:id])
         recipe.update(recipe_params)
-      end
+    end
+
+    def show
+        recipe = Recipe.find(params[:id])
+        render json: recipe, except: [:created_at, :updated_at]
+    end
+
     
     private
 

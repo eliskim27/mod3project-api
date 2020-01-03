@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_12_30_182013) do
     t.integer "recipe_id"
     t.integer "user_id"
     t.string "notes"
+    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
